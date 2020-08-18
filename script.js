@@ -38,9 +38,15 @@ document.getElementById("search-btn").addEventListener("click", function () {
             fetch(`https://api.lyrics.ovh/v1/${artistName}/${titleOfSong}`)
                 .then(response => response.json())
                 .then(song => {
-                
+                    if (song.error) {
+                        alert("Lyric Not Found")
+                    }
+                    else {
+                        
                     document.getElementById("songLyrics").innerHTML=`<h2 class="text-success mb-4">${titleOfSong} &#127925&#127925&#127925</h2>
                     <pre class="lyric text-white">${song.lyrics}</pre>`
+                    }
+                
 
                 })
                 
