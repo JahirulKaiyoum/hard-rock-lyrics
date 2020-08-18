@@ -39,7 +39,7 @@ document.getElementById("search-btn").addEventListener("click", function () {
                 .then(response => response.json())
                 .then(song => {
                     if (song.error) {
-                        alert("Lyric Not Found")
+                        alert("Lyric Not Found , Try another One")
                     }
                     else {
                         
