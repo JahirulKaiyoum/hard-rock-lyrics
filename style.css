@@ -39,3 +39,7 @@ body{
     border-radius: 10px;
 }
 
+
+#artist-name{
+    color:cyan;
+}
